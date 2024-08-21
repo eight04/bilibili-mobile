@@ -72,6 +72,7 @@
     grid-template-columns: 100vw 100vw;
     overflow: auto;
     justify-content: start;
+    scroll-snap-type: x mandatory;
   }
   .left-container,
   .left-container-under-player{
@@ -110,9 +111,11 @@
   #comment {
     padding: 0;
     grid-area: 6 / 1;
+    scroll-snap-align: start;
   }
   .right-container {
     grid-area: 6 / 2;
+    scroll-snap-align: start;
   }
 
   /* controls */
