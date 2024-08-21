@@ -28,6 +28,10 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.2.0 (Aug 21, 2024)
+
+  - Fix: 403 error when requesting videos.
+
 * 0.1.0 (Aug 21, 2024)
 
   - First release.
