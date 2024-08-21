@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"version": "0.0.0",
+	"name": "__MSG_extensionName__",
+	"description": "__MSG_extensionDescription__",
+	"author": "eight",
+	"homepage_url": "https://github.com/eight04/bilibili-mobile",
+	"permissions": [
+    "https://*.bilibili.com/*",
+    "webRequest",
+    "webRequestBlocking"
+	],
+	"optional_permissions": [
+	],
+	"background": {
+		"scripts": []
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.bilibili.com/*"
+			],
+			"js": [],
+      "css": [
+        "css/common.css"
+      ],
+			"run_at": "document_start"
+		}
+	],
+	"default_locale": "en"
+}

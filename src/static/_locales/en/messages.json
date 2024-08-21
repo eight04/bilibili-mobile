@@ -1,0 +1,10 @@
+{
+	"extensionName": {
+		"message": "Bilibili Mobile",
+		"description": "Name of the extension"
+	},
+	"extensionDescription": {
+		"message": "An extension to improve `www.bilibili.com` on mobile browsers.",
+		"description": "Description of the extension"
+	}
+}

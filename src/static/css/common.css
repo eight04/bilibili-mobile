@@ -1,0 +1,144 @@
+
+@media (max-width: 979px) {
+  body {
+    min-width: 0!important;
+    overflow-x: hidden;
+  }
+  #biliMainHeader {
+    display: none!important;
+  }
+  .bili-header {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .bili-header__bar,
+  .bili-header__channel,
+  .header-channel {
+    display: none!important;
+  }
+  .bili-header__banner {
+    min-height: 64px!important;
+    overflow:hidden;
+  }
+  .recommended-swipe {
+    display: none;
+  }
+  .bili-feed4-layout {
+    width: auto!important;
+  }
+  .feed-roll-btn {
+    transform: none!important;
+  }
+  .recommended-container_floor-aside .container {
+    grid-template-columns: repeat(1, 1fr)!important;
+  }
+  .floor-single-card,
+  .desktop-download-tip,
+  .vip-login-tip {
+    display: none!important;
+  }
+  
+  /* login dialog */
+  .bili-mini-content-wp {
+    width: 90vw!important;
+    max-height: 90vh;
+    overflow: auto;
+    padding: 10px!important;
+    flex-direction: column; 
+  }
+  .login-scan-wp,
+  .bili-mini-line,
+  .bili-mini-customer-title {
+    display: none!important;;
+  }
+  .bili-mini-login-right-wp,
+  .login-pwd-wp,
+  .bili-mini-content-wp .tab__form,
+  .bili-mini-content-wp .btn_wp {
+    width: 100%!important;
+  }
+
+  /* video page */
+  #mirror-vdcon {
+    min-width: 0!important;
+    display: grid!important;
+    height: 100vh!important;
+    padding: 0;
+    grid-template-columns: 100vw 100vw;
+    overflow: auto;
+    justify-content: start;
+  }
+  .left-container,
+  .left-container-under-player{
+    display: contents!important;
+  }
+  /* all elements & layout */
+  #viewbox_report,
+  #playerWrap,
+  #arc_toolbar_report,
+  #v_desc,
+  #v_tag,
+  #comment,
+  .right-container {
+    width: 100vw!important;
+    height: auto!important;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0!important;
+    position: sticky;
+    left: 0;
+    grid-area: 1 / 1;
+  }
+  #playerWrap {
+    padding: 0;
+    grid-area: 2 / 1;
+  }
+  #arc_toolbar_report {
+    grid-area: 3 / 1;
+  }
+  #v_desc {
+    grid-area: 4 / 1;
+  }
+  #v_tag {
+    grid-area: 5 / 1;
+  }
+  #comment {
+    padding: 0;
+    grid-area: 6 / 1;
+  }
+  .right-container {
+    grid-area: 6 / 2;
+  }
+
+  /* controls */
+  .video-title {
+    white-space: wrap!important;
+    margin: 0!important;
+  }
+  .show-more {
+    display: none;
+  }
+  #bilibili-player {
+    width: 100vw!important;
+    height: auto!important;
+  }
+  .bpx-docker {
+    height: auto;
+  }
+  .video-toolbar-right {
+    display: none!important;
+  }
+  .bpx-player-control-mask,
+  .bpx-player-control-entity {
+    display: block!important;
+  }
+  #activity_vote {
+    display: none;
+  }
+  #comment #navbar {
+    padding: 0 16px!important;
+  }
+}
+
+
