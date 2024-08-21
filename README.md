@@ -1,7 +1,6 @@
 bilibili-mobile
 ===========
 
-[![Build Status](https://travis-ci.com/eight04/bilibili-mobile.svg?branch=master)](https://travis-ci.org/eight04/bilibili-mobile)
 ![Github Build](https://github.com/eight04/bilibili-mobile/workflows/.github/workflows/build.yml/badge.svg)
 
 An extension to improve `www.bilibili.com` on mobile browsers.
@@ -12,24 +11,23 @@ Features
 * Responsive design.
 * Since you are viewing desktop site, you can view commnents, recommendations, and other desktop-only features.
 
+Screenshots
+-----------
+
+![Screenshot_20240821-150530 (Medium)](https://github.com/user-attachments/assets/ebcdda6f-805f-4bd1-b8de-678369c81d7a) ![Screenshot_20240821-150611 (Medium)](https://github.com/user-attachments/assets/a3759532-bd5b-4f9f-8084-a54263d0ad45) ![Screenshot_20240821-150625 (Medium)](https://github.com/user-attachments/assets/a7342eba-40cf-4db4-b035-8795ee96e58d)
+
+Dark theme made by [tolking](https://github.com/tolking/usercss/tree/main/bilibili-palette).
+
 Installation
 ------------
 
-### Firefox
+Download the latest release from the [release page](https://github.com/eight04/bilibili-mobile/releases).
 
-[Install from addons.mozilla.org](https://addons.mozilla.org/firefox/addon/bilibili-mobile/).
-
-### Chrome
-
-This extension can be installed on Chrome, but it is not hosted on Chrome Webstore. You have to install the extension manually:
-
-1. Download the latest release from the [release page](https://github.com/eight04/bilibili-mobile/releases).
-2. Extract the ZIP file to a folder.
-3. [Install the folder as an unpacked extension](https://stackoverflow.com/a/49769909/3413125).
+Currently, only kiwi supports loading extensions from ZIP files.
 
 Changelog
 ---------
 
-* 0.1.0
+* 0.1.0 (Aug 21, 2024)
 
   - First release.
