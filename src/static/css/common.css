@@ -69,7 +69,7 @@
     display: grid!important;
     height: 100vh!important;
     padding: 0;
-    grid-template-columns: 100vw 100vw;
+    grid-template-columns: repeat(2, calc(100vw - var(--scrollbar-w, 0)));
     overflow: auto;
     justify-content: start;
     scroll-snap-type: x mandatory;
@@ -86,7 +86,7 @@
   #v_tag,
   #comment,
   .right-container {
-    width: 100vw!important;
+    width: 100% !important;
     height: auto!important;
     padding: 10px;
     box-sizing: border-box;

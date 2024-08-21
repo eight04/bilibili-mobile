@@ -5,9 +5,15 @@ const observer = new MutationObserver(() => {
   }
 });
 observer.observe(document, { childList: true, subtree: true });
-//
-// const oldUA = navigator.userAgent;
-// const newUA = oldUA.replace(/ mobile /i, " ").replace(/Android [\d.]+; /i, "");
-// Object.defineProperty(navigator, "userAgent", {
-//   value: newUA,
-// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector("#mirror-vdcon");
+  if (!container) throw new Error("Container not found");
+  const observer = new ResizeObserver(() => {
+    const scrollbarw = container.offsetWidth - container.clientWidth;
+    const scrollbarh = container.offsetHeight - container.clientHeight;
+    container.style.setProperty("--scrollbar-w", `${scrollbarw}px`);
+    container.style.setProperty("--scrollbar-h", `${scrollbarh}px`);
+  });
+  observer.observe(container);
+});
