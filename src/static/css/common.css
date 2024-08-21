@@ -33,12 +33,16 @@
   .recommended-container_floor-aside .container {
     grid-template-columns: repeat(1, 1fr)!important;
   }
+  /* load thumbnails earlier */
+  .bili-video-card:not(.is-rcmd):has(~ .load-more-anchor) {
+    display: none;
+  } 
   .floor-single-card,
   .desktop-download-tip,
   .vip-login-tip {
     display: none!important;
   }
-  
+
   /* login dialog */
   .bili-mini-content-wp {
     width: 90vw!important;
