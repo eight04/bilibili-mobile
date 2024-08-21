@@ -7,6 +7,7 @@
 	"homepage_url": "https://github.com/eight04/bilibili-mobile",
 	"permissions": [
     "https://*.bilibili.com/*",
+    "https://*.bilivideo.com/*",
     "webRequest",
     "webRequestBlocking"
 	],

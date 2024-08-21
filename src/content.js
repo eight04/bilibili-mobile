@@ -5,3 +5,9 @@ const observer = new MutationObserver(() => {
   }
 });
 observer.observe(document, { childList: true, subtree: true });
+//
+// const oldUA = navigator.userAgent;
+// const newUA = oldUA.replace(/ mobile /i, " ").replace(/Android [\d.]+; /i, "");
+// Object.defineProperty(navigator, "userAgent", {
+//   value: newUA,
+// });
