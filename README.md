@@ -28,6 +28,11 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.3.0 (Aug 21, 2024)
+
+  - Add: scroll snap.
+  - Add: calculate scrollbar width.
+
 * 0.2.0 (Aug 21, 2024)
 
   - Fix: 403 error when requesting videos.
