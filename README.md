@@ -28,6 +28,11 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.4.0 (Aug 22, 2024)
+
+  - Add: support dragging in image viewer.
+  - Fix: infinite loop on `space.bilibili.com`
+
 * 0.3.0 (Aug 21, 2024)
 
   - Add: scroll snap.
