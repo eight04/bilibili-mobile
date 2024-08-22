@@ -1,6 +1,6 @@
 import cjs from "rollup-plugin-cjs-es";
 import resolve from "@rollup/plugin-node-resolve";
-import copy from 'rollup-plugin-copy';
+import { copy } from '@web/rollup-plugin-copy';
 import iife from "rollup-plugin-iife";
 import terser from "@rollup/plugin-terser";
 import output from "rollup-plugin-write-output";
@@ -8,11 +8,14 @@ import json from "@rollup/plugin-json";
 
 import glob from "tiny-glob";
 
-export default async () => ({
-  input: await glob("src/*.js"),
+export default {
+  input: Object.fromEntries((await glob("src/*.js")).map(file => {
+    const name = file.match(/([^/\\]+)\.js$/)[1];
+    return [`js/${name}`, file];
+  })),
   output: {
     format: "es",
-    dir: "build/js",
+    dir: "build",
     sourcemap: true
   },
   plugins: [
@@ -26,7 +29,8 @@ export default async () => ({
       nested: true
     }),
     copy({
-      targets: [{src: "src/static/*", "dest": "build"}]
+      patterns: "**/*",
+      rootDir: "src/static",
     }),
     iife(),
     terser({
@@ -58,4 +62,4 @@ export default async () => ({
       // }
     ])
   ]
-});
+};
