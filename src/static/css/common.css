@@ -140,6 +140,9 @@
   .bpx-player-control-entity {
     display: block!important;
   }
+  .bpx-player-cmd-dm-wrap {
+    position: absolute;
+  }
   #activity_vote {
     display: none;
   }
