@@ -107,10 +107,12 @@ function initTouchMove(el) {
       img.parentNode.style.transform = `translate3d(${startData.tx + dx}px, ${startData.ty + dy}px, ${startData.tz}px)${startData.suffix}`;
     }
   }, {passive: true});
-  el.shadowRoot.addEventListener("touchend", e => {
-    if (img) {
-      img = null;
-      startData = null;
-    }
-  }, {passive: true});
+  for (const event of ["touchend", "touchcancel"]) {
+    el.shadowRoot.addEventListener(event, () => {
+      if (img) {
+        img = null;
+        startData = null;
+      }
+    }, {passive: true});
+  }
 }
