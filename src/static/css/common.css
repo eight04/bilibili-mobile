@@ -143,6 +143,10 @@
   #activity_vote {
     display: none;
   }
+  /* FIXME: apply style to shadow dom */
+  #duel .option {
+    min-width: 0!important;
+  }
   #comment #navbar {
     padding: 0 16px!important;
   }

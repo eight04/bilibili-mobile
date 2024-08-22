@@ -63,4 +63,54 @@ function modifyUA() {
   });
 }
 
+const swipes = new WeakSet;
 
+document.addEventListener("click", e => {
+  if (e.target.tagName.match(/bili-photoswipe/i)) {
+    console.log("[mobile] bili-photoswipe clicked");
+    if (swipes.has(e.target)) {
+      return;
+    }
+    swipes.add(e.target);
+    initTouchMove(e.target)
+  }
+});
+
+function initTouchMove(el) {
+  let img;
+  let startData;
+  el.shadowRoot.addEventListener("touchstart", e => {
+    if (e.target.tagName.match(/img/i)) {
+      img = e.target;
+      startData = {
+        screenX: e.touches[0].screenX,
+        screenY: e.touches[0].screenY,
+        tx: 0,
+        ty: 0,
+        tz: 0,
+        suffix: ""
+      };
+      try {
+        const match = img.parentNode.style.transform.match(/translate3d\(([^,]+)px, ([^,]+)px, ([^,]+)px\)(.*)/);
+        startData.tx = parseFloat(match[1]);
+        startData.ty = parseFloat(match[2]);
+        startData.tz = parseFloat(match[3]);
+        startData.suffix = match[4];
+      } catch {}
+    }
+  }, { passive: true });
+  el.shadowRoot.addEventListener("touchmove", e => {
+    if (img) {
+      const data = e.touches[0];
+      const dx = data.screenX - startData.screenX;
+      const dy = data.screenY - startData.screenY;
+      img.parentNode.style.transform = `translate3d(${startData.tx + dx}px, ${startData.ty + dy}px, ${startData.tz}px)${startData.suffix}`;
+    }
+  }, {passive: true});
+  el.shadowRoot.addEventListener("touchend", e => {
+    if (img) {
+      img = null;
+      startData = null;
+    }
+  }, {passive: true});
+}
