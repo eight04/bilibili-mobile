@@ -37,9 +37,11 @@
   .bili-video-card:not(.is-rcmd):has(~ .load-more-anchor) {
     display: none;
   } 
+  /* ads */
   .floor-single-card,
   .desktop-download-tip,
-  .vip-login-tip {
+  .vip-login-tip,
+  #bannerAd {
     display: none!important;
   }
 
