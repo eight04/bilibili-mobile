@@ -98,6 +98,10 @@
   #playerWrap {
     padding: 0;
     grid-area: 2 / 1;
+    z-index: 1;
+    &.should-stick {
+      top: 0;
+    }
   }
   #arc_toolbar_report {
     grid-area: 3 / 1;
@@ -112,10 +116,12 @@
     padding: 0;
     grid-area: 6 / 1;
     scroll-snap-align: start;
+    position: static;
   }
   .right-container {
     grid-area: 6 / 2;
     scroll-snap-align: start;
+    position: static;
   }
 
   /* controls */
@@ -142,6 +148,22 @@
   }
   .bpx-player-cmd-dm-wrap {
     position: absolute;
+  }
+  /* hide sneding area on stuck */
+  .bpx-player-sending-area,
+  #bilibili-player-placeholder-bottom {
+    transition: opacity 0.3s linear;
+    opacity: 1;
+
+    #playerWrap.stuck & {
+      opacity: 0;
+    }
+  }
+  .bpx-player-container,
+  #bilibili-player-placeholder {
+    #playerWrap.stuck & {
+      box-shadow: none;
+    }
   }
   #activity_vote {
     display: none;

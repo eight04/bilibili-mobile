@@ -1,3 +1,7 @@
+import browser from "webextension-polyfill";
+
+import { modifyUA } from "./lib/ua.js";
+
 console.log("[mobile] content.js");
 
 headReady().then(() => {
@@ -38,7 +42,7 @@ function DOMReady() {
   });
 }
 
-DOMReady().then(() => {
+function initContainerObserver() {
   const container = document.querySelector("#mirror-vdcon");
   if (!container) {
     console.log("[mobile] container not found");
@@ -51,17 +55,45 @@ DOMReady().then(() => {
     container.style.setProperty("--scrollbar-h", `${scrollbarh}px`);
   });
   observer.observe(container);
-});
-
-modifyUA();
-
-function modifyUA() {
-  const ua = navigator.userAgent;
-  const newUA = ua.replace(/Android|Phone|SymbianOS|iPod|Mobile/ig, "");
-  Object.defineProperty(navigator, "userAgent", {
-    value: newUA,
-  });
 }
+
+function initVideoObserver() {
+  const container = document.querySelector("#playerWrap");
+  if (!container) {
+    console.log("[mobile] video container not found");
+    return;
+  }
+  const video = container.querySelector("video");
+  let hasVideo = false;
+  let isTooTall = false;
+  let isStuck = false;
+
+  const xo = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      isStuck = !entry.isIntersecting;
+      update();
+    }
+  }, { rootMargin: "-1px 0px 0px 0px", threshold: 1 });
+  xo.observe(container);
+
+  const ro = new ResizeObserver(() => {
+    isTooTall = container.offsetHeight > screen.height * 0.5;
+    hasVideo = video.videoHeight > 0;
+    update();
+  });
+  ro.observe(container);
+
+  function update() {
+    const shouldStick = hasVideo && !isTooTall;
+    container.classList.toggle("should-stick", shouldStick);
+    container.classList.toggle("stuck", shouldStick && isStuck);
+  }
+}
+
+DOMReady().then(() => {
+  initContainerObserver();
+  initVideoObserver();
+});
 
 const swipes = new WeakSet;
 
@@ -116,3 +148,23 @@ function initTouchMove(el) {
     }, {passive: true});
   }
 }
+
+let currentVID = getVID()
+document.addEventListener("historyStateUpdated", () => {
+  const newVID = getVID();
+  if (newVID !== currentVID) {
+    currentVID = newVID;
+    document.querySelector("#mirror-vdcon").scrollTo(0, 0);
+  }
+});
+
+function getVID() {
+  return location.pathname.match(/\/video\/([^/?]+)/)?.[1];
+}
+
+
+browser.runtime.onMessage.addListener((message) => {
+  if (message.method === "historyStateUpdated") {
+    document.dispatchEvent(new CustomEvent(message.method, {detail: message}));
+  }
+})

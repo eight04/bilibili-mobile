@@ -1,5 +1,7 @@
 import browser from "webextension-polyfill";
 
+import { modifyUA } from "./lib/ua.js";
+
 const filters = [
   { urls: ["https://*.bilibili.com/*"], types: ["main_frame"]},
   { urls: ["https://*.bilivideo.com/*"], types: ["xmlhttprequest"] }
@@ -15,8 +17,7 @@ function overrideHeaders({requestHeaders}) {
   for (const header of requestHeaders) {
     switch (header.name.toLowerCase()) {
       case "user-agent":
-        header.value = header.value.replace(/ mobile /i, " ");
-        header.value = header.value.replace(/Android [\d.]+; /i, "");
+        header.value = modifyUA(header.value);
         break;
       case "sec-ch-ua-mobile":
         header.value = "?0";
@@ -25,3 +26,8 @@ function overrideHeaders({requestHeaders}) {
   }
   return {requestHeaders};
 }
+
+browser.webNavigation.onHistoryStateUpdated.addListener(({tabId}) => {
+  browser.tabs.sendMessage(tabId, {method: "historyStateUpdated"});
+}, {url: [{hostSuffix: ".bilibili.com"}]});
+

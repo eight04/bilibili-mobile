@@ -8,6 +8,7 @@
 	"permissions": [
     "https://*.bilibili.com/*",
     "https://*.bilivideo.com/*",
+    "webNavigation",
     "webRequest",
     "webRequestBlocking"
 	],
@@ -19,15 +20,25 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"https://*.bilibili.com/*"
+				"https://*.bilibili.com/*",
+        "https://*.bilivideo.com/*"
 			],
 			"js": [],
       "css": [
         "css/common.css"
       ],
-			"run_at": "document_start",
+			"run_at": "document_start"
+		},
+    {
+      "matches": [
+        "https://*.bilibili.com/*",
+        "https://*.bilivideo.com/*"
+      ],
+      "js": [
+      ],
+      "run_at": "document_start",
       "world": "MAIN"
-		}
+    }
 	],
 	"default_locale": "en"
 }

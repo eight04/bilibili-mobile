@@ -16,7 +16,8 @@ export default {
   output: {
     format: "es",
     dir: "build",
-    sourcemap: true
+    sourcemap: true,
+    chunkFileNames: "js/[name]-[hash].js"
   },
   plugins: [
     resolve({
@@ -50,6 +51,14 @@ export default {
         target: "build/manifest.json",
         handle: (json, {scripts}) => {
           json.content_scripts[0].js = scripts;
+          return json;
+        }
+      },
+      {
+        test: /page\.js$/,
+        target: "build/manifest.json",
+        handle: (json, {scripts}) => {
+          json.content_scripts[1].js = scripts;
           return json;
         }
       },
