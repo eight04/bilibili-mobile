@@ -28,6 +28,12 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.5.0 (Aug 23, 2024)
+
+  - Fix: remove large dark area during video loading.
+  - Fix: scroll to top when video changes.
+  - Add: sticky video player.
+
 * 0.4.0 (Aug 22, 2024)
 
   - Add: support dragging in image viewer.
