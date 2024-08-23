@@ -1,7 +1,7 @@
 {
   "title": "bilibili-mobile",
   "name": "bilibili-mobile",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "eight04 <eight04@gmail.com>",
   "license": "MIT",
   "scripts": {
