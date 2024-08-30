@@ -40,5 +40,11 @@
       "world": "MAIN"
     }
 	],
-	"default_locale": "en"
+	"default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bilibili-mobile@eight04.github.io",
+      "strict_min_version": "42.0"
+    }
+  }
 }
