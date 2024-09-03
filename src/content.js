@@ -154,7 +154,7 @@ document.addEventListener("historyStateUpdated", () => {
   const newVID = getVID();
   if (newVID !== currentVID) {
     currentVID = newVID;
-    document.querySelector("#mirror-vdcon").scrollTo(0, 0);
+    document.querySelector("#app").scrollTo(0, 0);
   }
 });
 
