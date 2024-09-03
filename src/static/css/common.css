@@ -117,6 +117,7 @@
     #v_desc,
     #v_tag,
     #comment,
+    #commentapp,
     .right-container {
       width: 100% !important;
       height: auto!important;
@@ -144,7 +145,8 @@
     #v_tag {
       grid-area: 6 / 1;
     }
-    #comment {
+    #comment,
+    #commentapp {
       padding: 0;
       grid-area: 7 / 1;
       scroll-snap-align: none start;
