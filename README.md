@@ -28,6 +28,13 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.6.0 (Sep 3, 2024)
+
+  - Add: header bar.
+  - Fix: don't snap vertically.
+  - Fix: webRequest doesn't work on Firefox.
+  - Fix: missing addon ID.
+
 * 0.5.0 (Aug 23, 2024)
 
   - Fix: remove large dark area during video loading.
