@@ -4,22 +4,33 @@
     min-width: 0!important;
     overflow-x: hidden;
   }
-  #biliMainHeader {
-    display: none!important;
-  }
   .bili-header {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: visible;
   }
-  .bili-header__bar,
+  .bili-header__bar {
+    /* disable slide down */
+    /* position: absolute!important; */
+    .left-entry > :not(:first-child) {
+      display: none;
+    }
+    .right-entry {
+      display: none;
+    }
+  }
+  .nav-search-input {
+    width: 100%;
+  }
   .bili-header__channel,
   .header-channel {
     display: none!important;
   }
   .bili-header__banner {
+    min-width: 0!important;
     min-height: 64px!important;
-    overflow:hidden;
+  }
+  .header-banner__inner {
+    display: none!important;
   }
   .recommended-swipe {
     display: none;
@@ -66,64 +77,84 @@
   }
 
   /* video page */
-  #mirror-vdcon {
+  #app {
     min-width: 0!important;
     display: grid!important;
     height: 100vh!important;
     padding: 0;
-    grid-template-columns: repeat(2, calc(100vw - var(--scrollbar-w, 0)));
+    grid-template-columns: repeat(2, calc(100vw - var(--scrollbar-w, 0px)));
     overflow: auto;
     justify-content: start;
     scroll-snap-type: x mandatory;
-  }
-  .left-container,
-  .left-container-under-player{
-    display: contents!important;
-  }
-  /* all elements & layout */
-  #viewbox_report,
-  #playerWrap,
-  #arc_toolbar_report,
-  #v_desc,
-  #v_tag,
-  #comment,
-  .right-container {
-    width: 100% !important;
-    height: auto!important;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 0!important;
-    position: sticky;
-    left: 0;
-    grid-area: 1 / 1;
-  }
-  #playerWrap {
-    padding: 0;
-    grid-area: 2 / 1;
-    z-index: 1;
-    &.should-stick {
-      top: 0;
+
+    #mirror-vdcon,
+    #biliMainHeader,
+    .bili-header,
+    .left-container,
+    .left-container-under-player{
+      display: contents!important;
     }
-  }
-  #arc_toolbar_report {
-    grid-area: 3 / 1;
-  }
-  #v_desc {
-    grid-area: 4 / 1;
-  }
-  #v_tag {
-    grid-area: 5 / 1;
-  }
-  #comment {
-    padding: 0;
-    grid-area: 6 / 1;
-    scroll-snap-align: start;
-    position: static;
-  }
-  .right-container {
-    grid-area: 6 / 2;
-    scroll-snap-align: start;
-    position: static;
+    /* all elements & layout */
+    .bili-header__bar {
+      width: 100%!important;
+      height: auto!important;
+      padding: 0 10px!important;
+      position: sticky!important;
+      top: auto!important;
+      left: 0;
+
+      & > * {
+        margin: 0;
+      }
+      .nav-search-input {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+    #viewbox_report,
+    #playerWrap,
+    #arc_toolbar_report,
+    #v_desc,
+    #v_tag,
+    #comment,
+    .right-container {
+      width: 100% !important;
+      height: auto!important;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 0!important;
+      position: sticky;
+      left: 0;
+      grid-area: 2 / 1;
+    }
+    #playerWrap {
+      padding: 0;
+      grid-area: 3 / 1;
+      z-index: 1;
+      &.should-stick {
+        top: 0;
+      }
+    }
+    #arc_toolbar_report {
+      grid-area: 4 / 1;
+    }
+    #v_desc {
+      grid-area: 5 / 1;
+    }
+    #v_tag {
+      grid-area: 6 / 1;
+    }
+    #comment {
+      padding: 0;
+      grid-area: 7 / 1;
+      scroll-snap-align: none start;
+      position: static;
+    }
+    .right-container {
+      grid-area: 7 / 2;
+      scroll-snap-align: none start;
+      position: static;
+    }
   }
 
   /* controls */

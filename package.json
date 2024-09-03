@@ -12,11 +12,13 @@
     "build": "sync-version src/static/manifest.json && shx rm -rf build/* && rollup -c",
     "build-locales": "tx pull -a --use-git-timestamps && webext-tx-fix -s src/static",
     "build-artifact": "shx rm -rf web-ext-artifacts/* && web-ext build --ignore-files **/*.js.map",
+    "build-watch": "rollup -cw",
     "preversion": "npm test",
     "version": "npm run build && git add .",
     "postversion": "git push --follow-tags && npm run build-artifact && git archive -o latest.zip HEAD",
     "server": "node test/server.js",
-    "changelog": "shx cat README.md | mkcat | mkql \"[content=Changelog] + ul > :first-child > *\" | mkout"
+    "changelog": "shx cat README.md | mkcat | mkql \"[content=Changelog] + ul > :first-child > *\" | mkout",
+    "dev": "run-p build-watch start"
   },
   "eslintIgnore": [
     "build",
@@ -31,6 +33,7 @@
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
     "mkdoc": "^1.0.49",
+    "npm-run-all2": "^6.2.2",
     "rollup": "^4.20.0",
     "rollup-plugin-cjs-es": "^3.0.0",
     "rollup-plugin-iife": "^0.7.1",
