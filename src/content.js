@@ -43,7 +43,7 @@ function DOMReady() {
 }
 
 function initContainerObserver() {
-  const container = document.querySelector("#mirror-vdcon");
+  const container = document.querySelector("#app");
   if (!container) {
     console.log("[mobile] container not found");
     return;
