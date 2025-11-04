@@ -28,6 +28,13 @@ Currently, only kiwi supports loading extensions from ZIP files.
 Changelog
 ---------
 
+* 0.7.0 (Nov 4, 2025)
+
+  - Fix: scroll the entire page instead of just the app container.
+  - Fix: video player is convered by replies.
+  - Fix: remove app banner on home page.
+  - Fix: container and comment is changed.
+
 * 0.6.0 (Sep 3, 2024)
 
   - Add: header bar.
