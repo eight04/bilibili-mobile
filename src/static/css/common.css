@@ -2,7 +2,6 @@
 @media (max-width: 979px) {
   body {
     min-width: 0!important;
-    overflow-x: hidden;
   }
   .bili-header {
     width: 100%;
@@ -88,12 +87,16 @@
   #app {
     min-width: 0!important;
     display: grid!important;
-    height: 100vh!important;
+    height: auto!important;
     padding: 0;
-    grid-template-columns: repeat(2, calc(100vw - var(--scrollbar-w, 0px)));
-    overflow: auto;
+    grid-template-columns: 1fr 1fr;
+    width: calc((100vw - var(--scrollbar-w, 0px)) * 2) !important;
+    overflow: visible;
     justify-content: start;
-    scroll-snap-type: x mandatory;
+
+    html:has(&) {
+      scroll-snap-type: x mandatory;
+    }
 
     #mirror-vdcon,
     #biliMainHeader,
@@ -124,10 +127,13 @@
     #arc_toolbar_report,
     #v_desc,
     #v_tag,
+    .video-tag-container,
     #comment,
     #commentapp,
     .right-container {
       width: 100% !important;
+      min-width: 0!important;
+      overflow: hidden!important;
       height: auto!important;
       padding: 10px;
       box-sizing: border-box;
@@ -150,7 +156,8 @@
     #v_desc {
       grid-area: 5 / 1;
     }
-    #v_tag {
+    #v_tag,
+    .video-tag-container {
       grid-area: 6 / 1;
     }
     #comment,

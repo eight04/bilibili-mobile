@@ -5,7 +5,8 @@ import { modifyUA } from "./lib/ua.js";
 console.log("[mobile] content.js");
 
 headReady().then(() => {
-  document.head.insertAdjacentHTML("afterbegin", '<meta name="viewport" content="width=device-width, initial-scale=1" />');
+  // FIXME: https://bugzilla.mozilla.org/show_bug.cgi?id=1998090
+  document.head.insertAdjacentHTML("afterbegin", '<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />');
   // chrome mv2 doesn't support content_scripts[].world
   /* globals chrome */
   if (typeof chrome !== "undefined" && chrome.runtime) {
