@@ -44,6 +44,9 @@
   .recommended-container_floor-aside .container {
     grid-template-columns: repeat(1, 1fr)!important;
   }
+  .bili-feed-card .shortcut-bg { /* this causes overflow */
+    display: none!important;
+  }
   /* load thumbnails earlier */
   .bili-video-card:not(.is-rcmd):has(~ .load-more-anchor) {
     display: none;
@@ -74,6 +77,11 @@
   .bili-mini-content-wp .tab__form,
   .bili-mini-content-wp .btn_wp {
     width: 100%!important;
+  }
+
+  /* download app banner */
+  .lt-row {
+    display: none!important;
   }
 
   /* video page */
