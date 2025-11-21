@@ -38,6 +38,14 @@
       ],
       "run_at": "document_start",
       "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://space.bilibili.com/*"
+      ],
+      "css": [
+        "css/space.css"
+      ]
     }
 	],
 	"default_locale": "en",
