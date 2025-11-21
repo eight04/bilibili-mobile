@@ -35,6 +35,10 @@ See also
 Changelog
 ---------
 
+* 0.8.0 (Nov 21, 2025)
+
+  - Add: support space.bilibili.com.
+
 * 0.7.0 (Nov 4, 2025)
 
   - Fix: scroll the entire page instead of just the app container.
