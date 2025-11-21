@@ -25,6 +25,13 @@ Download the latest release from the [release page](https://github.com/eight04/b
 
 Currently, only kiwi supports loading extensions from ZIP files.
 
+See also
+---------
+
+* [Bilibili - 防止视频被自动暂停及弹出登录窗口](https://greasyfork.org/zh-TW/scripts/467474-bilibili-%E9%98%B2%E6%AD%A2%E8%A7%86%E9%A2%91%E8%A2%AB%E8%87%AA%E5%8A%A8%E6%9A%82%E5%81%9C%E5%8F%8A%E5%BC%B9%E5%87%BA%E7%99%BB%E5%BD%95%E7%AA%97%E5%8F%A3)
+* [Bilibili - 在未登录的情况下照常加载评论](https://greasyfork.org/zh-TW/scripts/552388-bilibili-%E5%9C%A8%E6%9C%AA%E7%99%BB%E5%BD%95%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E7%85%A7%E5%B8%B8%E5%8A%A0%E8%BD%BD%E8%AF%84%E8%AE%BA)
+* [bilibili Dark Theme by y-64](https://userstyles.world/style/10951/bilibili-dark-theme)
+
 Changelog
 ---------
 
