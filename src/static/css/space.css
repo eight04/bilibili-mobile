@@ -1,0 +1,71 @@
+#app {
+  display: block!important;
+  width: auto!important;
+  /* overflow: hidden!important; */
+}
+
+/* fixed nav */
+.bili-header {
+  min-width: 0!important;
+}
+.bili-header .bili-header__bar {
+  width: 100vw;
+}
+.bili-header .center-search-container {
+  min-width: 0;
+}
+.header .header-upinfo {
+  min-width: 0!important;
+  display: block!important;
+  padding: 0 1em 1em!important;
+}
+
+/* nav */
+.nav-bar__main {
+  width: 100vw;
+  min-width: 0!important;
+  overflow: auto;
+}
+
+#app .space-main {
+  min-width: 0;
+  padding: 0 1em;
+}
+.space-home {
+  display: block;
+}
+.section-wrap__header {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+.video-section .items:not(.full) {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+}
+
+/* card */
+.bili-bangumi-card {
+  flex-direction: column;
+}
+
+/* uploads */
+.space-upload {
+  flex-direction: column;
+}
+.space-upload .upload-sidenav {
+  width: auto!important;
+  height: auto!important;
+  position: static!important;
+}
+.video .video-body .video-list.grid-mode {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+}
+
+.video .video-footer .video-pagination,
+.vui_pagenation--btns {
+  flex-wrap: wrap;
+}
+
+#app .space-float {
+  display: none!important;
+}
