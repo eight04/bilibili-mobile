@@ -35,6 +35,10 @@ See also
 Changelog
 ---------
 
+* 0.9.0 (Dec 21, 2025)
+
+  - Fix: activity banner.
+
 * 0.8.0 (Nov 21, 2025)
 
   - Add: support space.bilibili.com.

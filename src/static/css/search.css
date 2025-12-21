@@ -1,0 +1,64 @@
+#bili-header-container {
+  display: none !important;
+}
+.search-input-container .search-fixed-header {
+  min-width: 0 !important;
+}
+#i_cecream {
+  min-width: 0 !important;
+  max-width: 100vw !important;
+}
+.search-conditions {
+  padding: 0 5px;
+
+  .conditions-order,
+  .search-condition-row {
+    display: inline;
+  }
+  .search-condition-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+
+    & > button {
+      margin: 0!important;
+      padding: 0;
+    }
+  }
+  .i_button_more {
+    display: none;
+  }
+}
+.more-conditions {
+  height: auto !important;
+}
+.i_wrapper {
+  padding: 0;
+
+  .video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0;
+
+    > * {
+      max-width: 100%;
+    }
+  }
+}
+.vui_tabs--navbar .vui_tabs--nav {
+  overflow-x: auto;
+}
+.info-card {
+  max-width: 100%;
+  overflow: hidden;
+}
+.vui_pagenation {
+  display: inline;
+  white-space: normal;
+
+  .vui_pagenation--btns {
+    display: inline;
+  }
+}
+#biliMainFooter {
+  display: none!important;
+}

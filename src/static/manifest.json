@@ -46,6 +46,14 @@
       "css": [
         "css/space.css"
       ]
+    },
+    {
+      "matches": [
+        "https://search.bilibili.com/*"
+      ],
+      "css": [
+        "css/search.css"
+      ]
     }
 	],
 	"default_locale": "en",
