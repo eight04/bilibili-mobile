@@ -45,7 +45,8 @@
       ],
       "css": [
         "css/space.css"
-      ]
+      ],
+      "run_at": "document_start"
     },
     {
       "matches": [
@@ -53,7 +54,8 @@
       ],
       "css": [
         "css/search.css"
-      ]
+      ],
+      "run_at": "document_start"
     }
 	],
 	"default_locale": "en",

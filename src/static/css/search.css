@@ -38,9 +38,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: 0;
+    gap: 8px;
 
     > * {
       max-width: 100%;
+      margin: 0;
     }
   }
 }
@@ -50,6 +52,19 @@
 .info-card {
   max-width: 100%;
   overflow: hidden;
+}
+.bili-video-card__skeleton.hide {
+  display: none!important;
+}
+.bili-video-card__wrap {
+  position: static!important;
+}
+.bili-video-card .bili-video-card__info {
+  min-height: 0!important;
+}
+.bili-video-card .bili-video-card__info--tit {
+  height: auto!important;
+  -webkit-line-clamp: none!important;
 }
 .vui_pagenation {
   display: inline;

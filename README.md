@@ -38,6 +38,7 @@ Changelog
 * 0.9.0 (Dec 21, 2025)
 
   - Fix: activity banner.
+  - Add: support search.bilibili.com.
 
 * 0.8.0 (Nov 21, 2025)
 
