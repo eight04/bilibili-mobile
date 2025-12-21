@@ -110,7 +110,7 @@
       width: 100%!important;
       height: auto!important;
       padding: 0 10px!important;
-      position: sticky!important;
+      position: sticky;
       top: auto!important;
       left: 0;
 
@@ -122,14 +122,7 @@
         min-width: 0;
       }
     }
-    #viewbox_report,
-    #playerWrap,
-    #arc_toolbar_report,
-    #v_desc,
-    #v_tag,
-    .video-tag-container,
-    #comment,
-    #commentapp,
+    .left-container > *,
     .right-container {
       width: 100% !important;
       min-width: 0!important;
@@ -138,8 +131,17 @@
       padding: 10px;
       box-sizing: border-box;
       margin: 0!important;
+    }
+    #viewbox_report,
+    #playerWrap,
+    #arc_toolbar_report,
+    #v_desc,
+    #v_tag,
+    .video-tag-container {
       position: sticky;
       left: 0;
+    }
+    #viewbox_report {
       grid-area: 2 / 1;
     }
     #playerWrap {
@@ -163,14 +165,40 @@
     #comment,
     #commentapp {
       padding: 0;
-      grid-area: 7 / 1;
       scroll-snap-align: none start;
       position: static;
     }
     .right-container {
-      grid-area: 7 / 2;
+      grid-area: 7 / 2 / span 3;
       scroll-snap-align: none start;
       position: static;
+    }
+    /* spacer to take right column space so extra elements wont fall into it by default */
+    &::before {
+      content: "";
+      grid-area: 1 / 2 / 7 / 2;
+    }
+    /* inside wrp */
+    .inside-wrp {
+      position: relative;
+      .left {
+        float: none;
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        z-index: 1;
+
+        > * {
+          white-space: normal!important;
+          overflow: visible!important;
+        }
+      }
+      .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.4
+      }
     }
   }
 

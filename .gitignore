@@ -1,10 +1,12 @@
-node_modules
-web-ext-artifacts
-build
-chrome
+/node_modules
+/web-ext-artifacts
+/build
+/chrome
 
 *.zip
 *.xpi
 *.log
+*.crx
+*.pem
 
 .eslintcache
