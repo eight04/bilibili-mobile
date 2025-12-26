@@ -89,8 +89,8 @@
     display: grid!important;
     height: auto!important;
     padding: 0;
-    grid-template-columns: 1fr 1fr;
-    width: calc((100vw - var(--scrollbar-w, 0px)) * 2) !important;
+    grid-template-columns: repeat(2, calc((100vw - var(--scrollbar-w, 0px))));
+    width: min-content!important;
     overflow: visible;
     justify-content: start;
 
