@@ -164,6 +164,7 @@
     }
     #comment,
     #commentapp {
+      grid-area: 7 / 1;
       padding: 0;
       scroll-snap-align: none start;
       position: static;
