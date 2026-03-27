@@ -4,6 +4,8 @@ import { modifyUA } from "./lib/ua.js";
 
 console.log("[mobile] content.js");
 
+document.documentElement.dataset.page = location.pathname.split("/")[1] || "home";
+
 headReady().then(() => {
   // FIXME: https://bugzilla.mozilla.org/show_bug.cgi?id=1998090
   document.head.insertAdjacentHTML("afterbegin", '<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />');

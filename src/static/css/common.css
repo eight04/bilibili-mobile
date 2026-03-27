@@ -6,6 +6,7 @@
   .bili-header {
     width: 100%;
     overflow: visible;
+    min-width: 0!important;
   }
   .bili-header__bar {
     /* disable slide down */
@@ -84,7 +85,10 @@
   }
 
   /* video page */
-  #app {
+  html[data-page=video] {
+    scroll-snap-type: x mandatory;
+  }
+  html[data-page=video] #app {
     min-width: 0!important;
     display: grid!important;
     height: auto!important;
@@ -93,10 +97,6 @@
     width: min-content!important;
     overflow: visible;
     justify-content: start;
-
-    html:has(&) {
-      scroll-snap-type: x mandatory;
-    }
 
     #mirror-vdcon,
     #biliMainHeader,

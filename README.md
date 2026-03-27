@@ -35,6 +35,12 @@ See also
 Changelog
 ---------
 
+* 0.10.0 (Mar 27, 2026)
+
+  - Fix: right container disappeared.
+  - Fix: home page overflowed.
+  - Add: build CRX.
+
 * 0.9.0 (Dec 21, 2025)
 
   - Fix: activity banner.
