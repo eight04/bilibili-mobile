@@ -1,12 +1,13 @@
 
 @media (max-width: 979px) {
-  body {
+  body,
+  #app,
+  .bili-header {
     min-width: 0!important;
   }
   .bili-header {
     width: 100%;
     overflow: visible;
-    min-width: 0!important;
   }
   .bili-header__bar {
     /* disable slide down */
