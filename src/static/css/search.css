@@ -32,7 +32,7 @@
   height: auto !important;
 }
 .i_wrapper {
-  padding: 0;
+  padding: 0!important;
 
   .video-list {
     display: grid;
@@ -55,7 +55,7 @@
   max-width: 100%;
   overflow: hidden;
 }
-.bili-video-card__skeleton.hide {
+.bili-video-card .bili-video-card__skeleton.hide {
   display: none!important;
 }
 .bili-video-card__wrap {
@@ -67,13 +67,16 @@
 .bili-video-card .bili-video-card__info--tit {
   height: auto!important;
   -webkit-line-clamp: none!important;
+  text-indent: 0;
+  padding: 0!important;
+  display: block!important;
 }
 .vui_pagenation {
-  display: inline;
-  white-space: normal;
+  display: inline!important;
+  white-space: normal!important;
 
   .vui_pagenation--btns {
-    display: inline;
+    display: inline!important;
   }
 }
 #biliMainFooter {
