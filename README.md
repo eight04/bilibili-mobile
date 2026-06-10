@@ -35,6 +35,11 @@ See also
 Changelog
 ---------
 
+* 0.10.1 (Jun 10, 2026)
+
+  - Fix: app min-width.
+  - Fix: search page layout.
+
 * 0.10.0 (Mar 27, 2026)
 
   - Fix: right container disappeared.
