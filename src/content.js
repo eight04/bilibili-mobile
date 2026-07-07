@@ -66,7 +66,6 @@ function initVideoObserver() {
     console.log("[mobile] video container not found");
     return;
   }
-  const video = container.querySelector("video");
   let hasVideo = false;
   let isTooTall = false;
   let isStuck = false;
@@ -81,6 +80,8 @@ function initVideoObserver() {
 
   const ro = new ResizeObserver(() => {
     isTooTall = container.offsetHeight > screen.height * 0.5;
+    // NOTE: video is recreated when switching page and cant be cached.
+    const video = container.querySelector("video");
     hasVideo = video.videoHeight > 0;
     update();
   });
