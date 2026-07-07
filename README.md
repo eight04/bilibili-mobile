@@ -35,6 +35,11 @@ See also
 Changelog
 ---------
 
+* 0.10.4 (Jul 7, 2026)
+
+  - Fix: video doesn't stick after URL change.
+  - Add: crx build.
+
 * 0.10.1 (Jun 10, 2026)
 
   - Fix: app min-width.
