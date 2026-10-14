@@ -1,4 +1,3 @@
-
 @media (max-width: 979px) {
   body,
   #app,
@@ -83,6 +82,22 @@
   /* download app banner */
   .lt-row {
     display: none!important;
+  }
+  
+  /* search page */
+  .media-item {
+    margin: 0!important;
+    
+    .media-card {
+      margin: 0;
+      flex-direction: column;
+      gap: 15px;
+            
+      .media-card-image {
+        margin: 0;
+        align-self: center;
+      }
+    }
   }
 
   /* video page */
@@ -256,5 +271,6 @@
     padding: 0 16px!important;
   }
 }
+
 
 
