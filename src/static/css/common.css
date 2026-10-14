@@ -3,17 +3,13 @@
   #app,
   .bili-header {
     min-width: 0!important;
-  }
-  .bili-header {
     width: 100%;
     overflow: visible;
   }
   .bili-header__bar {
-    /* disable slide down */
-    /* position: absolute!important; */
-    .left-entry > :not(:first-child) {
-      display: none;
-    }
+    min-width: 0!important;
+
+    .left-entry,
     .right-entry {
       display: none;
     }
@@ -85,7 +81,7 @@
   }
   
   /* search page */
-  .media-item {
+  .media-list > .row {
     margin: 0!important;
     
     .media-card {
