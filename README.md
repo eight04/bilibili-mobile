@@ -35,6 +35,11 @@ See also
 Changelog
 ---------
 
+* 0.10.5 (Oct 19, 2026)
+
+  - Fix: media card in search page.
+  - Fix: search bar on front page.
+
 * 0.10.4 (Jul 7, 2026)
 
   - Fix: video doesn't stick after URL change.
