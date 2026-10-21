@@ -35,6 +35,10 @@ See also
 Changelog
 ---------
 
+* 0.10.6 (Oct 22, 2026)
+
+  - Fix: URL format changed. Now the URL includes language code?
+
 * 0.10.5 (Oct 19, 2026)
 
   - Fix: media card in search page.
