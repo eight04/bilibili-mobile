@@ -33,12 +33,13 @@
   }
   .bili-feed4-layout {
     width: auto!important;
+
+    .container {
+      grid-template-columns: 1fr!important;
+    }
   }
   .feed-roll-btn {
     transform: none!important;
-  }
-  .recommended-container_floor-aside .container {
-    grid-template-columns: repeat(1, 1fr)!important;
   }
   .bili-feed-card .shortcut-bg { /* this causes overflow */
     display: none!important;

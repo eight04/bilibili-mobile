@@ -4,7 +4,21 @@ import { modifyUA } from "./lib/ua.js";
 
 console.log("[mobile] content.js");
 
-document.documentElement.dataset.page = location.pathname.split("/")[1] || "home";
+document.documentElement.dataset.page = getCurrentPage();
+
+function getCurrentPage() {
+  const parts = location.pathname.split("/");
+  for (let i = 0; i < parts.length; i++) {
+    if (!parts[i]) {
+      continue;
+    }
+    if (parts[i].match(/zh-\w+/i)) { // language code?
+      continue;
+    }
+    return parts[i];
+  }
+  return "home";
+}
 
 headReady().then(() => {
   // FIXME: https://bugzilla.mozilla.org/show_bug.cgi?id=1998090
