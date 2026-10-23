@@ -10,7 +10,14 @@ const filters = [
 for (const f of filters) {
   // NOTE: on Firefox, you can't register the same listener multiple times
   // so we need to use a different function for each filter
-  const overrideHeaders = ({requestHeaders}) => {
+  const overrideHeaders = ({requestHeaders, url, type}) => {
+    let match;
+    if (type === "main_frame" && (match = url.match(/https:\/\/www\.bilibili\.com\/video\/(.*)/))) {
+      return {
+        redirectUrl: `https://www.bilibili.com/zh-Hans/video/${match[1]}`
+      };
+    }
+
     for (const header of requestHeaders) {
       switch (header.name.toLowerCase()) {
         case "user-agent":
