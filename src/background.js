@@ -12,9 +12,9 @@ for (const f of filters) {
   // so we need to use a different function for each filter
   const overrideHeaders = ({requestHeaders, url, type}) => {
     let match;
-    if (type === "main_frame" && (match = url.match(/https:\/\/www\.bilibili\.com\/video\/(.*)/))) {
+    if (type === "main_frame" && (match = url.match(/https:\/\/www\.bilibili\.com\/zh-Hans\/video\/(.*)/))) {
       return {
-        redirectUrl: `https://www.bilibili.com/zh-Hans/video/${match[1]}`
+        redirectUrl: `https://www.bilibili.com/video/${match[1]}`
       };
     }
 
