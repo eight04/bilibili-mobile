@@ -27,6 +27,11 @@
   overflow: auto;
 }
 
+/* space-header */
+.upinfo .operations {
+  display: none!important;
+}
+
 #app .space-main {
   min-width: 0;
   padding: 0 1em;
@@ -38,6 +43,17 @@
   width: 100%;
   overflow: auto;
   white-space: nowrap;
+  display: block;
+  height: auto;
+
+  .section-wrap__title,
+  .section-wrap__desc {
+    display: inline-block;
+  }
+
+  .radio-filter {
+    margin: 1em 0;
+  }
 }
 .video-section .items:not(.full) {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
