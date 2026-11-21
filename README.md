@@ -35,6 +35,11 @@ See also
 Changelog
 ---------
 
+* 0.10.7 (Nov 21, 2026)
+
+  - Fix: revert language code redirect.
+  - Fix: space header.
+
 * 0.10.6 (Oct 22, 2026)
 
   - Fix: URL format changed. Now the URL includes language code?
